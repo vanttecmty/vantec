@@ -195,7 +195,7 @@ def send_testing_2():
 
 #Receive Testing
 def receive_testing():
-	s = x.receive_from_station();	
+	s = x.receive_from_station();
 	print(s)
 	return s
 

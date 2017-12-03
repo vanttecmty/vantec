@@ -34,7 +34,7 @@ class Motors:
 		self.baudRate = 115200;
 
 		#serial communication Hanlder
-		ser = serial.Serial(self.get_port(), baudRate );
+		ser = serial.Serial(self.get_port(), self.baudRate );
 
 	'''
 	@desc 	Get imu port **

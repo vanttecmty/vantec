@@ -41,8 +41,9 @@ class Lidar:
 		self.socket_connection.close();  
 		self.socket.close();
 
+	#Read lidar obstacles from socket
 	def get_obstacles(self):
-		#Fetch the data
+		#Fetch the data from the socket
 		message = self.socket_connection.recv(LIDAR_SOCKET_BUFFER_SIZE);
 
 		#Format lidar measurements

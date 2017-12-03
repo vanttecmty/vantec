@@ -37,7 +37,7 @@ EARTH_RADIUOS = 6371000;
 '''
 
 class Imu:
-	def __init__(self, USB):
+	def __init__(self):
 		self.northYaw = 0;
 		self.earthRadious = EARTH_RADIUOS;
 		self.vnSensor = VnSensor();
@@ -227,7 +227,7 @@ class Imu:
 	@return float degree
 	'''
 	def get_degrees_to_north_orientation(self):
-		degree = (get_yaw_orientation(self)%360) - self.northYaw;
+		degree = (self.get_yaw_orientation(self)%360) - self.northYaw;
 
 		if (degree > 180):
 			degree = degree - 360;
@@ -242,12 +242,12 @@ class Imu:
 				float degrees 
 	'''
 	def get_degrees_and_distance_to_gps_coords(latitude2, longitud2):
-		north = (get_yaw_orientation(self)%360) - self.northYaw;
+		north = (self.get_yaw_orientation(self)%360) - self.northYaw;
 
 		if (north > 180):
 			north = north - 360;
 
-		coords = get_gps_coords(self);
+		coords = self.get_gps_coords(self);
 		latitude1 = coords['latitude'];
 		longitud1 = coords['longitud'];
 

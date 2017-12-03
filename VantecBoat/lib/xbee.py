@@ -14,7 +14,7 @@ leidoAnterior = ""
 class Xbee:
 	def __init__(self, portUSB):
 
-		self.connection = serial.Serial(portUSB, 9600)
+		self.connection = serial.Serial(portUSB, 9600);
 		self.timestamp = ''
 
 	def send_to_station(self, meesage):

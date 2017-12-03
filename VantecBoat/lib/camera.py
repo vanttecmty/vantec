@@ -8,7 +8,6 @@
 import datetime
 import serial
 import time
-#import cv2
 import cv2
 import dbscan_contours as dbscan
 
@@ -20,8 +19,6 @@ ID_EXTRERNAL_CAMERA = 1;
 class Camera:
 	def __init__(self):
 		self.capture = None;
-		self.frame = None;
-
 		#set correct camera
 		self.capture = cv2.VideoCapture(ID_EXTRERNAL_CAMERA);
 
@@ -30,14 +27,16 @@ class Camera:
 
 	def read(self, print_read = True):
 		#Read camera
-		self.frame = capture.read();
+		frame = capture.read();
+		
 		#Print image
-
 		if print_read:
 			cv2.imshow('cam', self.frame[1]);
 			cv2.waitKey(100);
 
-	def getObstacles(self):
+		return frame;
+
+	def getObstacles(self, frame):
 		#print read capture
 		print_read = True
 		self.read(print_read;
