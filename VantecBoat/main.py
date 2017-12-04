@@ -2,8 +2,8 @@
 	@name       	main.py
     @desc 			Principal file for the vantec boat.
 	@author 		Marcopolo Gil Melchor marcogil93@gmail.com
-	@created_at 	2017-06-05 
-	@updated_at 	2017-11-28 Restructuration and comments. 
+	@created_at 	2017-12-01
+	@updated_at 	2017-12-01
 	@dependecies	python3
 '''
 
@@ -15,7 +15,6 @@
 import threading
 
 #Basic libraries
-
 
 '''
 	Required our project libraries 
